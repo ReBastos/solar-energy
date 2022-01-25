@@ -1,19 +1,22 @@
 .loginContainer {
-  width: 100vw;
+  width: 50%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
 }
 
 .imgDiv {
   height: 100vh;
-  width: auto;
+  width: 100%;
   background: url("../../images/imgLogin.png");
 }
 
@@ -32,5 +35,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 15px;
+}
+
+h3 {
+  color: #2e303b;
 }
 /*# sourceMappingURL=index.css.map */

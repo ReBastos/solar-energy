@@ -1,36 +1,35 @@
-import loginImage from '../../images/imgLogin.png'
-import logo from '../../images/logo.png'
-import './index.css'
-import { LoginInputs } from '../../components/Inputs/styles'
-import { BiggerLogo } from '../../components/Logos/styles'
-import { LoginButton } from '../../components/Buttons/styles'
+import loginImage from "../../images/imgLogin.png";
+import logo from "../../images/logo.png";
+import "./index.css";
+import { LoginInputs } from "../../components/Inputs/styles";
+import { BiggerLogo } from "../../components/Logos/styles";
+import { LoginButton } from "../../components/Buttons/styles";
+import { Link } from "react-router-dom";
 
 const Login = () => {
-
-    return(
-        <>
-        <div className="loginContainer">
-
+  return (
+    <>
+      <div className="loginContainer">
         <img src={loginImage} alt="" className="imgDiv" />
+      </div>
 
-
+      <div className="loginContainer">
         <div className="loginDiv">
+          <BiggerLogo src={logo} />
 
-            
-            <BiggerLogo src={logo}/>
+          <h3>Seja Bem-Vindo!</h3>
 
-            <LoginInputs/>
+          <LoginInputs />
 
-            <LoginInputs/>
+          <LoginInputs />
 
-            <LoginButton>Entrar</LoginButton>
-
+            <Link>
+          <LoginButton>Entrar</LoginButton>
+          </Link>
         </div>
-        </div>
+      </div>
+    </>
+  );
+};
 
-        </>
-    )
-
-}
-
-export default Login
+export default Login;
