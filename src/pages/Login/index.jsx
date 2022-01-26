@@ -7,6 +7,13 @@ import { LoginButton } from "../../components/Buttons/styles";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+
+
+  const onSubmit = () =>{
+
+    console.log('submit');
+
+  }
   return (
     <>
       <div className="loginContainer">
@@ -19,13 +26,15 @@ const Login = () => {
 
           <h3>Seja Bem-Vindo!</h3>
 
+          <form onSubmit={onSubmit}>
           <LoginInputs />
 
           <LoginInputs />
 
-            <Link>
-          <LoginButton>Entrar</LoginButton>
+            <Link to="/dashboard">
+          <LoginButton type="submit">Entrar</LoginButton>
           </Link>
+          </form>
         </div>
       </div>
     </>

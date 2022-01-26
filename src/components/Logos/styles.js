@@ -10,7 +10,8 @@ export const BiggerLogo = styled.img`
 
 export const SmallLogo = styled.img`
 
-width: 150px;
-height: 150px;
+        width: 135px;
+         height: 89px;
+         margin-bottom: 40px;
 
 `

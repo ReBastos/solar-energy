@@ -6,5 +6,12 @@ export const LoginInputs = styled.input`
     width: 300px;
     height: 45px;
 
+    &:focus{
+        zoom: 105%;
+    }
+
+    &:hover{
+        zoom: 105%;
+    }
 `
 
