@@ -1,6 +1,24 @@
 {
-    "unidades": [{}],
-
-    "geracao": [{}]
-
+  "unidades": [
+    {},
+    {
+      "id": "1",
+      "apelido": "Teste Apelido",
+      "local": "Teste Local",
+      "marca": "Teste Marca",
+      "modelo": "Teste Modelo",
+      "ativo": false
+    },
+    {
+      "apelido": "Teste Apelido",
+      "local": "Teste Local",
+      "marca": "Teste Marca",
+      "modelo": "Teste Modelo",
+      "ativo": false,
+      "id": "Mfita-H"
+    }
+  ],
+  "geracao": [
+    {}
+  ]
 }

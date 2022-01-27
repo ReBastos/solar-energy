@@ -1,4 +1,5 @@
 import { PageDiv, PageTitle, SubTitle } from "../../components/PageDiv/style";
+import FormCheckbox from "../../components/CheckBox";
 import FormInput from "../../components/Inputs";
 import {PrimaryButton} from "../../components/Buttons/styles";
 import Menu from "../../components/Menu";
@@ -11,6 +12,31 @@ const CadastroUnidadeConsumidora = () => {
     const [marca, setMarca ] = useState('');
     const [modelo, setModelo ] = useState('');
     const [ativo, setAtivo] = useState(false);
+
+    const handleSubmit = async (evt) =>{
+
+        evt.preventDefault();
+
+        try{
+            await fetch('http://localhost:3333/unidades',
+            {
+                method: 'POST',
+                body: JSON.stringify({
+                    apelido: apelido,
+                    local: local,
+                    marca: marca,
+                    modelo: modelo,
+                    ativo: ativo
+                }),
+                headers: {'Content-Type': 'application/json'},
+            },
+            )
+        } catch (error) {
+            console.log('error')
+
+        }
+
+    }
 
     
     return(
@@ -45,9 +71,13 @@ const CadastroUnidadeConsumidora = () => {
         setValue={setModelo}
         />
 
-        <input type={'checkbox'}></input>
+        <FormCheckbox
+        value={ativo}
+        setValue={setAtivo}
+        
+        />
 
-        <PrimaryButton>Salvar</PrimaryButton>
+        <PrimaryButton onClick={handleSubmit}>Salvar</PrimaryButton>
 
         </PageDiv>
         </>

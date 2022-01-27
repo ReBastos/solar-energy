@@ -1,7 +1,7 @@
 import loginImage from "../../images/imgLogin.png";
 import logo from "../../images/logo.png";
 import "./index.css";
-import { LoginInputs } from "../../components/Inputs/styles";
+import { LoginInputs } from "../../components/LoginInputs/styles";
 import { BiggerLogo } from "../../components/Logos/styles";
 import { LoginButton } from "../../components/Buttons/styles";
 import { Link } from "react-router-dom";

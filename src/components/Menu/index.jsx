@@ -1,5 +1,6 @@
 import {SmallLogo} from '../Logos/styles'
-import { MenuButton, MenuDiv } from './style'
+import { MenuDiv } from './style'
+import MenuOption from '../MenuOption'
 import logo from '../../images/logo2.png'
 import { Link } from 'react-router-dom'
 
@@ -9,9 +10,27 @@ const Menu = () =>{
         <>
         <MenuDiv>
             <SmallLogo src={logo}/>
-            <Link to='/dashboard'><MenuButton>DashBoard</MenuButton></Link>
-            <Link to='/unidadeconsumidora'><MenuButton>Unidade Consumidora</MenuButton></Link>
-            <Link to='/cadastroenergia'><MenuButton>Cadastro de Energia Gerada</MenuButton></Link>
+            <Link to='/dashboard'>
+                <MenuOption
+                icon={'https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-bar-infographic-elements-soft-fill-soft-fill-juicy-fish-2.png'}
+                title={'Dashboard'}
+                />
+            </Link>
+
+            <Link to='/unidadeconsumidora'>
+                <MenuOption
+                icon={'https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-bar-infographic-elements-soft-fill-soft-fill-juicy-fish-2.png'}
+                title={'Unidade Consumidora'}
+                />
+            </Link>
+
+            <Link to='/cadastroenergia'>
+                <MenuOption
+                icon={'https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-bar-infographic-elements-soft-fill-soft-fill-juicy-fish-2.png'}
+                title={'Cadastro de Energia Gerada'}
+                />
+            </Link>
+
         </MenuDiv>
         </>
 
