@@ -16,3 +16,15 @@ width: 100%;
 color: #414e60;
 
 `
+
+export const SubTitle = styled(PageTitle)`
+
+    font-size: 24px
+
+`
+export const InputLabel =  styled(SubTitle)`
+
+font-size: 20px;
+color: #5d6166;
+
+`

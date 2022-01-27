@@ -13,9 +13,28 @@ const Dashboard = () => {
         <PageDiv>
         <PageTitle>Dashboard</PageTitle>
 
-        <DashboardCard/>
-        <DashboardCard/>
-        <DashboardCard/>
+        <DashboardCard
+        title={'Total Unidades'}
+        data={'15'}
+        />
+
+        <DashboardCard
+        title={'Unidades Ativas'}
+        data={'15'}
+        />
+
+        <DashboardCard
+        title={'Unidades Inativas'}
+        data={'15'}
+        />
+
+        <DashboardCard
+        title={'Média de Energia'}
+        data={'15'}
+        />  
+        
+
+
         </PageDiv>
 
 

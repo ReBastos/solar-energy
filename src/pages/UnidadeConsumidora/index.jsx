@@ -1,5 +1,7 @@
 import Menu from "../../components/Menu";
 import { PageDiv, PageTitle } from "../../components/PageDiv/style";
+import {PrimaryButton} from "../../components/Buttons/styles";
+import { Link } from "react-router-dom";
 
 const UnidadeConsumidora = () =>{
 
@@ -10,6 +12,7 @@ const UnidadeConsumidora = () =>{
         <PageDiv>
         <PageTitle>Unidade Consumidora</PageTitle>
 
+        <Link to='/cadastrounidadeconsumidora'><PrimaryButton>Nova unidade</PrimaryButton></Link>
         </PageDiv>
         </>
 

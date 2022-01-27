@@ -17,4 +17,16 @@ export const LoginButton = styled.button`
 export const PrimaryButton = styled.button`
 
     background-color: #4c5df1;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    
+
+    &:hover{
+        cursor: pointer;
+        zoom: 105%;
+    }
 `

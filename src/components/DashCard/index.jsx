@@ -1,14 +1,14 @@
 import { DashCardDiv } from "./style"
 
 
-const DashboardCard = ({title, info}) => {
+const DashboardCard = ({title, data}) => {
 
     return(
     <>
         <DashCardDiv>
-            <h3>Teste</h3>
+            <h3>{title}</h3>
 
-            <p>16</p>
+            <p>{data}</p>
 
         </DashCardDiv>
 

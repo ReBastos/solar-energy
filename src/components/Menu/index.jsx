@@ -10,7 +10,7 @@ const Menu = () =>{
         <MenuDiv>
             <SmallLogo src={logo}/>
             <Link to='/dashboard'><MenuButton>DashBoard</MenuButton></Link>
-            <MenuButton>Unidade Consumidora</MenuButton>
+            <Link to='/unidadeconsumidora'><MenuButton>Unidade Consumidora</MenuButton></Link>
             <Link to='/cadastroenergia'><MenuButton>Cadastro de Energia Gerada</MenuButton></Link>
         </MenuDiv>
         </>

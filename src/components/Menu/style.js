@@ -25,6 +25,6 @@ export const MenuDiv = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 7px;
-    padding-top: 20px;
+    
 
 `
