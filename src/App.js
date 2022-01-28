@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import CadastroEnergiaGerada from './pages/CadastroEnergiaGerada';
 import UnidadeConsumidora from './pages/UnidadeConsumidora';
 import CadastroUnidadeConsumidora from './pages/CadastroUnidadeConsumidora';
+import EditUnidadeConsumidora from './pages/EditUnidadeConsumidora';
 
 import {UnidadeConsumidoraProvider} from './contexts/UnidadeConsumidora'
 
@@ -20,6 +21,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/unidadeconsumidora' element={<UnidadeConsumidora/>}/>
       <Route path='/cadastrounidadeconsumidora' element={<CadastroUnidadeConsumidora/>}/>
+      <Route path='/editarunidadeconsumidora' element={<EditUnidadeConsumidora/>}/>
       <Route path='/cadastroenergia' element={<CadastroEnergiaGerada/>}/>
     </Routes>
     </UnidadeConsumidoraProvider>

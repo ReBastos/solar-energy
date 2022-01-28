@@ -6,6 +6,7 @@ export function UnidadeConsumidoraProvider({children}){
 
     const [UnidadesConsumidoras, setUnidadesConsumidoras] = useState([]);
     const [atualizar, setAtualizar] = useState(0);
+
     const [editValue, setEditValue] = useState();
 
     useEffect( async () => {
@@ -22,6 +23,15 @@ export function UnidadeConsumidoraProvider({children}){
 
     }
     
+    const editUnidade = async (id) => {
+
+        const responseedit = await fetch('http://localhost:3333/unidades/'+id);
+        const editJson = await responseedit.json();
+        setEditValue(editJson);
+
+        
+
+    }
 
     return(
         <UnidadeConsumidoraContext.Provider
@@ -29,7 +39,7 @@ export function UnidadeConsumidoraProvider({children}){
             unidades: UnidadesConsumidoras,
             atualizar : atualizarFetch,
             editValue: editValue,
-            setEditValue: setEditValue
+            editUnidade: editUnidade
 
         }}>
         {children}

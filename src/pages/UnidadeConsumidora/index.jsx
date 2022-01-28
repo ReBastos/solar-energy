@@ -18,13 +18,13 @@ const UnidadeConsumidora = () =>{
 
     const [estadoLinhas, setEstadoLinhas] = useState('');
 
-    console.log(unidadesLinhas);
+    
 
     if(unidadesContext == null) {
         return(null)
     } else {
 
-        console.log(unidadesContext.unidades);
+
         
         const linhas = unidadesLinhas.map((value) => {
                return( <Row
@@ -38,7 +38,7 @@ const UnidadeConsumidora = () =>{
             } )
         
     
-    console.log(linhas);
+    
 
     return(
         <>

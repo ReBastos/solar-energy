@@ -2,10 +2,13 @@ import {EditButton} from '../EditButton/styles';
 import {RemoveButton} from '../RemoveButton/styles';
 import { useContext, useState } from "react";
 import {UnidadeConsumidoraContext} from '../../contexts/UnidadeConsumidora/index.js'
+import { useNavigate } from 'react-router-dom';
 
 const Row = ({id, apelido, local, marca, modelo}) => {
 
     const rowContext = useContext(UnidadeConsumidoraContext);
+
+    const redirectEdit = useNavigate();
 
     const deleteJson = async (evt) => {
 
@@ -26,7 +29,7 @@ const Row = ({id, apelido, local, marca, modelo}) => {
             },
             )
         } catch (error) {
-            console.log('error')
+           
 
         }
 
@@ -35,6 +38,8 @@ const Row = ({id, apelido, local, marca, modelo}) => {
 
     const handleEdit = () =>{
 
+        rowContext.editUnidade(id);
+        redirectEdit('/editarunidadeconsumidora');
 
     }
     

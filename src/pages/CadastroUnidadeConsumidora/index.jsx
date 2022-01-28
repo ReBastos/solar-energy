@@ -38,7 +38,7 @@ const CadastroUnidadeConsumidora = () => {
             },
             )
         } catch (error) {
-            console.log('error')
+            
 
         }
 

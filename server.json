@@ -1,14 +1,6 @@
 {
   "unidades": [
     {
-      "apelido": "Novo Apelido",
-      "local": "Novo Local",
-      "marca": "Nova Marca",
-      "modelo": "Novo Modelo",
-      "ativo": false,
-      "id": 3
-    },
-    {
       "apelido": "teste5",
       "local": "teste5",
       "marca": "teste5",
@@ -31,6 +23,14 @@
       "modelo": "teste",
       "ativo": true,
       "id": 8
+    },
+    {
+      "apelido": "Edit Teste",
+      "local": "Teste Edit",
+      "marca": "edit",
+      "modelo": "edit",
+      "ativo": false,
+      "id": 9
     }
   ],
   "geracao": []

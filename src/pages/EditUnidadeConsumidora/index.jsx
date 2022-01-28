@@ -10,17 +10,23 @@ import {UnidadeConsumidoraContext} from '../../contexts/UnidadeConsumidora/index
 const EditUnidadeConsumidora = () => {
 
     const EditContext = useContext(UnidadeConsumidoraContext);
-
-    useEffect(async () => {
-
-
-    },[]);
+    console.log(EditContext)
     
     const [editApelido, setEditApelido ] = useState('');
     const [editLocal, setEditLocal ] = useState('');
     const [editMarca, setEditMarca ] = useState('');
     const [editModelo, setEditModelo ] = useState('');
     const [editAtivo, setEditAtivo] = useState(false);
+
+    useEffect( async () => {
+        setEditApelido(EditContext.editValue.apelido);
+        setEditLocal(EditContext.editValue.local);
+        setEditMarca(EditContext.editValue.marca);
+        setEditModelo(EditContext.editValue.modelo);
+        setEditAtivo(EditContext.editValue.ativo);
+
+    },[EditContext]);
+
 
     const retorno = useNavigate();
     
@@ -33,17 +39,17 @@ const EditUnidadeConsumidora = () => {
             {
                 method: 'POST',
                 body: JSON.stringify({
-                    apelido: apelido,
-                    local: local,
-                    marca: marca,
-                    modelo: modelo,
-                    ativo: ativo
+                    apelido: '',
+                    local: '',
+                    marca: '',
+                    modelo: '',
+                    ativo: ''
                 }),
                 headers: {'Content-Type': 'application/json'},
             },
             )
         } catch (error) {
-            console.log('error')
+            
 
         }
 
@@ -52,6 +58,9 @@ const EditUnidadeConsumidora = () => {
     retorno('/unidadeconsumidora');
     }
 
+    if(EditContext.editValue === undefined) {
+        return(null)
+    } else{
     
     return(
         <>
@@ -83,7 +92,7 @@ const EditUnidadeConsumidora = () => {
 
         <FormInput
         label={'Modelo'}
-        value={editModelo  }
+        value={editModelo}
         setValue={setEditModelo}
         />
 
@@ -99,6 +108,6 @@ const EditUnidadeConsumidora = () => {
         </>
 
     )
-}
+}}
 
 export default EditUnidadeConsumidora;

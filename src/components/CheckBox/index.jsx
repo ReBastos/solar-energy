@@ -11,7 +11,7 @@ const FormCheckbox = ({value, setValue}) => {
             setValue(false)
         }
 
-        console.log(value);
+        
     }
 
     return(

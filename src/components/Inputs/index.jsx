@@ -7,7 +7,7 @@ const FormInput = ({label, value, setValue}) => {
 
     const handleOnChange = (evt) => {
         setValue(evt.target.value);
-        console.log(value);
+        
     }
 
     return(
