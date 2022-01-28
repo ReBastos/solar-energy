@@ -68,7 +68,7 @@ const UnidadeConsumidora = () =>{
         </tbody>
         </Table>
 
-        <Link to='/cadastrounidadeconsumidora'><PrimaryButton>Nova unidade</PrimaryButton></Link>
+        <Link to='/cadastrounidadeconsumidora' style={{width: 'fit-content'}}><PrimaryButton>Nova unidade</PrimaryButton></Link>
         </PageDiv>
         </>
 

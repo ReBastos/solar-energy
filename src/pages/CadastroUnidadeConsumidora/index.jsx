@@ -3,10 +3,13 @@ import FormCheckbox from "../../components/CheckBox";
 import FormInput from "../../components/Inputs";
 import {PrimaryButton} from "../../components/Buttons/styles";
 import Menu from "../../components/Menu";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import {UnidadeConsumidoraContext} from '../../contexts/UnidadeConsumidora/index.js'
 
 const CadastroUnidadeConsumidora = () => {
+
+    const cadastroContext = useContext(UnidadeConsumidoraContext);
 
     const [apelido, setApelido ] = useState('');
     const [local, setLocal ] = useState('');
@@ -38,6 +41,7 @@ const CadastroUnidadeConsumidora = () => {
 
         }
 
+        cadastroContext.atualizar();
     
     retorno('/unidadeconsumidora');
     }

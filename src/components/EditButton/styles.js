@@ -7,5 +7,7 @@ height: 30px;
 background-color: #8db51b;
 color: white;
 font-weight: bold;
+border:none;
+border-radius: 7px;
 
 `

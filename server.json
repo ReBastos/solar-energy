@@ -31,6 +31,30 @@
       "modelo": "teste",
       "ativo": true,
       "id": 4
+    },
+    {
+      "apelido": "Teste Ativo",
+      "local": "Ativo",
+      "marca": "Ativo",
+      "modelo": "Ativo",
+      "ativo": true,
+      "id": 5
+    },
+    {
+      "apelido": "teste5",
+      "local": "teste5",
+      "marca": "teste5",
+      "modelo": "teste5",
+      "ativo": true,
+      "id": 6
+    },
+    {
+      "apelido": "Teste",
+      "local": "Teste",
+      "marca": "Teste",
+      "modelo": "Teste",
+      "ativo": true,
+      "id": 7
     }
   ],
   "geracao": []

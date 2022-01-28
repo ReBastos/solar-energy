@@ -1,10 +1,31 @@
 import Menu from "../../components/Menu";
 import { PageDiv, PageTitle } from "../../components/PageDiv/style";
 import DashboardCard from "../../components/DashCard";
+import { useContext, useState } from "react";
+import {UnidadeConsumidoraContext} from '../../contexts/UnidadeConsumidora/index.js'
+
 
 const Dashboard = () => {
 
+    const dashboardContext = useContext(UnidadeConsumidoraContext);
 
+    const countUnidadesAtivas = dashboardContext.unidades.filter((value) => {
+       
+        if(value.ativo){
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    const countUnidadesInativas = dashboardContext.unidades.filter((value) => {
+       
+        if(value.ativo){
+            return false;
+        } else {
+            return true;
+        }
+    });
 
     return(
         <>
@@ -17,17 +38,17 @@ const Dashboard = () => {
 
         <DashboardCard
         title={'Total Unidades'}
-        data={'15'}
+        data={dashboardContext.unidades.length}
         />
 
         <DashboardCard
         title={'Unidades Ativas'}
-        data={'15'}
+        data={countUnidadesAtivas.length}
         />
 
         <DashboardCard
         title={'Unidades Inativas'}
-        data={'15'}
+        data={countUnidadesInativas.length}
         />
 
         <DashboardCard

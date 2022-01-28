@@ -5,6 +5,7 @@ export const UnidadeConsumidoraContext = createContext([]);
 export function UnidadeConsumidoraProvider({children}){
 
     const [UnidadesConsumidoras, setUnidadesConsumidoras] = useState([]);
+    const [atualizar, setAtualizar] = useState(0);
 
     useEffect( async () => {
         const response = await fetch('http://localhost:3333/unidades');
@@ -12,13 +13,20 @@ export function UnidadeConsumidoraProvider({children}){
         setUnidadesConsumidoras(unidadesResponse);
         
 
-    },[]);
+    },[atualizar]);
+
+    const atualizarFetch =  async () =>{
+        const atualizacao = await fetch('http://localhost:3333/unidades');
+        setAtualizar(atualizacao);
+
+    }
+    
 
     return(
         <UnidadeConsumidoraContext.Provider
         value={{
             unidades: UnidadesConsumidoras,
-            test2 :"teste"
+            atualizar : atualizarFetch
 
         }}>
         {children}
