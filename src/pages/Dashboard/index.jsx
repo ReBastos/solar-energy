@@ -35,7 +35,7 @@ const Dashboard = () => {
 
         <PageDiv>
         <PageTitle>Dashboard</PageTitle>
-
+        <div style={{display: 'flex', gap :'7px'}}>
         <DashboardCard
         title={'Total Unidades'}
         data={dashboardContext.unidades.length}
@@ -55,7 +55,7 @@ const Dashboard = () => {
         title={'Média de Energia'}
         data={'15'}
         />  
-        
+        </div>
 
 
         </PageDiv>

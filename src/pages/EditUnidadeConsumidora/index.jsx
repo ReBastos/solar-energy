@@ -4,22 +4,27 @@ import FormInput from "../../components/Inputs";
 import {PrimaryButton} from "../../components/Buttons/styles";
 import Menu from "../../components/Menu";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {UnidadeConsumidoraContext} from '../../contexts/UnidadeConsumidora/index.js'
 
-const CadastroUnidadeConsumidora = () => {
+const EditUnidadeConsumidora = () => {
 
-    const cadastroContext = useContext(UnidadeConsumidoraContext);
+    const EditContext = useContext(UnidadeConsumidoraContext);
 
-    const [apelido, setApelido ] = useState('');
-    const [local, setLocal ] = useState('');
-    const [marca, setMarca ] = useState('');
-    const [modelo, setModelo ] = useState('');
-    const [ativo, setAtivo] = useState(false);
+    useEffect(async () => {
+
+
+    },[]);
+    
+    const [editApelido, setEditApelido ] = useState('');
+    const [editLocal, setEditLocal ] = useState('');
+    const [editMarca, setEditMarca ] = useState('');
+    const [editModelo, setEditModelo ] = useState('');
+    const [editAtivo, setEditAtivo] = useState(false);
 
     const retorno = useNavigate();
     
-    const handleSubmit = async (evt) =>{
+    const handleEdit = async (evt) =>{
 
         evt.preventDefault();
 
@@ -42,7 +47,7 @@ const CadastroUnidadeConsumidora = () => {
 
         }
 
-        cadastroContext.atualizar();
+        EditContext.atualizar();
     
     retorno('/unidadeconsumidora');
     }
@@ -60,35 +65,35 @@ const CadastroUnidadeConsumidora = () => {
 
         <FormInput
         label={'Apelido'}
-        value={apelido}
-        setValue={setApelido}
+        value={editApelido}
+        setValue={setEditApelido}
         />
 
         <FormInput
         label={'Local'}
-        value={local}
-        setValue={setLocal}
+        value={editLocal}
+        setValue={setEditLocal}
         />
 
         <FormInput
         label={'Marca'}
-        value={marca}
-        setValue={setMarca}
+        value={editMarca}
+        setValue={setEditMarca}
         />
 
         <FormInput
         label={'Modelo'}
-        value={modelo}
-        setValue={setModelo}
+        value={editModelo  }
+        setValue={setEditModelo}
         />
 
         <FormCheckbox
-        value={ativo}
-        setValue={setAtivo}
+        value={editAtivo}
+        setValue={setEditAtivo}
         
         />
 
-        <PrimaryButton onClick={handleSubmit}>Salvar</PrimaryButton>
+        <PrimaryButton onClick={handleEdit}>Salvar</PrimaryButton>
 
         </PageDiv>
         </>
@@ -96,4 +101,4 @@ const CadastroUnidadeConsumidora = () => {
     )
 }
 
-export default CadastroUnidadeConsumidora;
+export default EditUnidadeConsumidora;

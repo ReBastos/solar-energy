@@ -6,6 +6,7 @@ export function UnidadeConsumidoraProvider({children}){
 
     const [UnidadesConsumidoras, setUnidadesConsumidoras] = useState([]);
     const [atualizar, setAtualizar] = useState(0);
+    const [editValue, setEditValue] = useState();
 
     useEffect( async () => {
         const response = await fetch('http://localhost:3333/unidades');
@@ -26,7 +27,9 @@ export function UnidadeConsumidoraProvider({children}){
         <UnidadeConsumidoraContext.Provider
         value={{
             unidades: UnidadesConsumidoras,
-            atualizar : atualizarFetch
+            atualizar : atualizarFetch,
+            editValue: editValue,
+            setEditValue: setEditValue
 
         }}>
         {children}

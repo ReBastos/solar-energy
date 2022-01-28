@@ -32,6 +32,12 @@ const Row = ({id, apelido, local, marca, modelo}) => {
 
         rowContext.atualizar();
     }
+
+    const handleEdit = () =>{
+
+
+    }
+    
     return (
         
         <tr>
@@ -45,7 +51,7 @@ const Row = ({id, apelido, local, marca, modelo}) => {
 
         <td>{modelo}</td>
 
-        <td><EditButton>Editar</EditButton></td>
+        <td><EditButton onClick={handleEdit}>Editar</EditButton></td>
 
         <td><RemoveButton onClick={deleteJson}>Remover</RemoveButton></td>
         </tr>
