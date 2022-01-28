@@ -10,4 +10,9 @@ font-weight: bold;
 border:none;
 border-radius: 7px;
 
+&:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px -4px rgba(0,0,0,0.67) ;
+}
+
 `

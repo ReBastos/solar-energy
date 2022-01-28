@@ -1,44 +1,12 @@
 {
   "unidades": [
     {
-      "id": 1,
-      "apelido": "Teste Apelido",
-      "local": "Teste Local",
-      "marca": "Teste Marca",
-      "modelo": "Teste Modelo",
-      "ativo": false
-    },
-    {
-      "apelido": "Teste Id",
-      "local": "IDid",
-      "marca": "Ididid",
-      "modelo": "Id",
-      "ativo": false,
-      "id": 2
-    },
-    {
       "apelido": "Novo Apelido",
       "local": "Novo Local",
       "marca": "Nova Marca",
       "modelo": "Novo Modelo",
       "ativo": false,
       "id": 3
-    },
-    {
-      "apelido": "Teste Mudança Tela",
-      "local": "teste",
-      "marca": "teste",
-      "modelo": "teste",
-      "ativo": true,
-      "id": 4
-    },
-    {
-      "apelido": "Teste Ativo",
-      "local": "Ativo",
-      "marca": "Ativo",
-      "modelo": "Ativo",
-      "ativo": true,
-      "id": 5
     },
     {
       "apelido": "teste5",
@@ -55,6 +23,14 @@
       "modelo": "Teste",
       "ativo": true,
       "id": 7
+    },
+    {
+      "apelido": "teste d",
+      "local": "teste",
+      "marca": "etset",
+      "modelo": "teste",
+      "ativo": true,
+      "id": 8
     }
   ],
   "geracao": []
