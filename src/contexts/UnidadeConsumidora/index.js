@@ -4,12 +4,20 @@ export const UnidadeConsumidoraContext = createContext([]);
 
 export function UnidadeConsumidoraProvider({children}){
 
-    const [UnidadeConsumidora, setUnidadeConsumidora] = useState([]);
+    const [UnidadesConsumidoras, setUnidadesConsumidoras] = useState([]);
+
+    useEffect( async () => {
+        const response = await fetch('http://localhost:3333/unidades');
+        const unidadesResponse = await response.json();
+        setUnidadesConsumidoras(unidadesResponse);
+        
+
+    },[]);
 
     return(
         <UnidadeConsumidoraContext.Provider
         value={{
-            test: 'test',
+            unidades: UnidadesConsumidoras,
             test2 :"teste"
 
         }}>

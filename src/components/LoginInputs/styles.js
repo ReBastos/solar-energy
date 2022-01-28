@@ -11,8 +11,6 @@ export const LoginInputs = styled.input`
         zoom: 105%;
     }
 
-    &:hover{
-        zoom: 105%;
-    }
+
 `
 

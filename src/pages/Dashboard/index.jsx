@@ -8,7 +8,9 @@ const Dashboard = () => {
 
     return(
         <>
-        <Menu/>
+        <Menu
+        selected1={true}
+        />
 
         <PageDiv>
         <PageTitle>Dashboard</PageTitle>

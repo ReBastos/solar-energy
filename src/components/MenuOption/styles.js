@@ -8,18 +8,19 @@ export const MenuButton = styled.div`
     gap: 10px;
     width: 200px;
     height: 50px;
-    background: none;
+    background-color: ${(props) => props.selected ? '#4cbc9a' : 'none'};
     border: none;
     border-radius: 7px;
-    color: #a098ae;
+    color: ${(props) => props.selected ? 'white' : '#a098ae'};
     font-size: 16px;
     text-align: left;
     padding-left: 3px;
-    text-decoration: none;
+    box-shadow: 0px 0px 6px -4px rgba(0,0,0,0.67);
 
     &:hover {
         background-color: #4cbc9a;
         color: white;
+        zoom: 105%;
     }
 
     img{

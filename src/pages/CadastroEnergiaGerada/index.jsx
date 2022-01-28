@@ -5,10 +5,13 @@ const CadastroEnergiaGerada = () => {
 
     return(
         <>
-        <Menu/>
+        <Menu
+        selected3={true}
+        />
 
         <PageDiv>
         <PageTitle>Lançamento de Geração Mensal</PageTitle>
+
 
         </PageDiv>
         </>

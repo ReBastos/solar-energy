@@ -12,6 +12,6 @@ export const SmallLogo = styled.img`
         margin-top: 15px;
         width: 135px;
          height: 89px;
-         margin-bottom: 40px;
+         margin-bottom: 20px;
 
 `

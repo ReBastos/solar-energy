@@ -1,8 +1,7 @@
 {
   "unidades": [
-    {},
     {
-      "id": "1",
+      "id": 1,
       "apelido": "Teste Apelido",
       "local": "Teste Local",
       "marca": "Teste Marca",
@@ -10,39 +9,29 @@
       "ativo": false
     },
     {
-      "apelido": "Teste Apelido",
-      "local": "Teste Local",
-      "marca": "Teste Marca",
-      "modelo": "Teste Modelo",
+      "apelido": "Teste Id",
+      "local": "IDid",
+      "marca": "Ididid",
+      "modelo": "Id",
       "ativo": false,
-      "id": "Mfita-H"
+      "id": 2
     },
     {
-      "apelido": "Teste Apelido",
-      "local": "Teste Local",
-      "marca": "Teste Marca",
-      "modelo": "Teste Modelo",
+      "apelido": "Novo Apelido",
+      "local": "Novo Local",
+      "marca": "Nova Marca",
+      "modelo": "Novo Modelo",
       "ativo": false,
-      "id": "Kn-Ff5f"
+      "id": 3
     },
     {
-      "apelido": "Teste Apelido",
-      "local": "Teste Local",
-      "marca": "Teste Marca",
-      "modelo": "Teste Modelo",
-      "ativo": false,
-      "id": "16va27M"
-    },
-    {
-      "apelido": "Microondas",
-      "local": "Cozinha",
-      "marca": "Brastemp",
-      "modelo": "155W",
+      "apelido": "Teste Mudança Tela",
+      "local": "teste",
+      "marca": "teste",
+      "modelo": "teste",
       "ativo": true,
-      "id": "TQ_OIZB"
+      "id": 4
     }
   ],
-  "geracao": [
-    {}
-  ]
+  "geracao": []
 }

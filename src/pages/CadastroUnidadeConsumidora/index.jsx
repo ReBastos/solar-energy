@@ -4,6 +4,7 @@ import FormInput from "../../components/Inputs";
 import {PrimaryButton} from "../../components/Buttons/styles";
 import Menu from "../../components/Menu";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CadastroUnidadeConsumidora = () => {
 
@@ -13,6 +14,7 @@ const CadastroUnidadeConsumidora = () => {
     const [modelo, setModelo ] = useState('');
     const [ativo, setAtivo] = useState(false);
 
+    const retorno = useNavigate();
     const handleSubmit = async (evt) =>{
 
         evt.preventDefault();
@@ -36,12 +38,16 @@ const CadastroUnidadeConsumidora = () => {
 
         }
 
+    
+    retorno('/unidadeconsumidora');
     }
 
     
     return(
         <>
-        <Menu/>
+        <Menu 
+        selected2={true}
+        />
 
         <PageDiv>
         <PageTitle>Unidade Consumidora</PageTitle>
