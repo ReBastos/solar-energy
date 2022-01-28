@@ -16,6 +16,30 @@
       "modelo": "Teste Modelo",
       "ativo": false,
       "id": "Mfita-H"
+    },
+    {
+      "apelido": "Teste Apelido",
+      "local": "Teste Local",
+      "marca": "Teste Marca",
+      "modelo": "Teste Modelo",
+      "ativo": false,
+      "id": "Kn-Ff5f"
+    },
+    {
+      "apelido": "Teste Apelido",
+      "local": "Teste Local",
+      "marca": "Teste Marca",
+      "modelo": "Teste Modelo",
+      "ativo": false,
+      "id": "16va27M"
+    },
+    {
+      "apelido": "Microondas",
+      "local": "Cozinha",
+      "marca": "Brastemp",
+      "modelo": "155W",
+      "ativo": true,
+      "id": "TQ_OIZB"
     }
   ],
   "geracao": [
