@@ -3,12 +3,13 @@ import { PageDiv, PageTitle } from "../../components/PageDiv/style";
 import DashboardCard from "../../components/DashCard";
 import { useContext, useState } from "react";
 import { UnidadeConsumidoraContext } from "../../contexts/UnidadeConsumidora/index.js";
+import { Doughnut } from 'react-chartjs-2';
 
 const Dashboard = () => {
   const dashboardContext = useContext(UnidadeConsumidoraContext);
 
   const totalW = dashboardContext.unidades.map((value) => {
-    return value.modelo;
+    return parseInt(value.modelo) 
   });
 
   const averageSum = totalW.reduce((a, b) => a + b, 0);
@@ -56,6 +57,8 @@ const Dashboard = () => {
             data={averageSum / totalW.length}
           />
         </div>
+
+        
       </PageDiv>
     </>
   );

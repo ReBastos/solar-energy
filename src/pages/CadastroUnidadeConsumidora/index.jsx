@@ -58,6 +58,7 @@ const CadastroUnidadeConsumidora = () => {
         <PageTitle>Unidade Consumidora</PageTitle>
         <SubTitle>Cadastro de Unidade Consumidora</SubTitle>
 
+        <form onSubmit={handleSubmit}>
         <FormInput
         label={'Apelido'}
         value={apelido}
@@ -89,10 +90,13 @@ const CadastroUnidadeConsumidora = () => {
         <FormCheckbox
         value={ativo}
         setValue={setAtivo}
-        
         />
 
-        <PrimaryButton onClick={handleSubmit}>Salvar</PrimaryButton>
+        <PrimaryButton type={'submit'}>Salvar</PrimaryButton>
+
+        </form>
+
+        
 
         </PageDiv>
         </>
