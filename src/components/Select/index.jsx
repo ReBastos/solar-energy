@@ -1,32 +1,32 @@
-import { InputLabel } from "../PageDiv/style"
+import { InputLabel } from "../PageDiv/style";
 import { List } from "./styles";
 
-const Select = ({placeholder, opcoes}) => {
+const Select = ({ placeholder, opcoes, value, setValue }) => {
+  
+  const handleSelectOnhcange = (evt) => {
+    setValue(evt.target.value);
+  };
 
+  const listOptions = opcoes.map((value) => {
+    return (
+      <option key={value.id} value={value.apelido}>
+        {value.apelido}
+      </option>
+    );
+  });
 
-    const listOptions = opcoes.map((value) => {
+  return (
+    <div>
+      <InputLabel>Unidade Geradora</InputLabel>
 
-        return(
-            <option
-                key={value.id}
-                value={value.apelido}>
-                {value.apelido}
-              </option>
-        )
-
-    })
-    return(
-        <>
-        <InputLabel>Unidade Geradora</InputLabel>
-        
-        
-        <List selected=''>
-            <option selected disabled value="">{placeholder}</option>
-            {listOptions}
-        </List>
-        </>
-
-    )
-}
+      <List selected="" onChange={handleSelectOnhcange}>
+        <option selected disabled value="">
+          {placeholder}
+        </option>
+        {listOptions}
+      </List>
+    </div>
+  );
+};
 
 export default Select;

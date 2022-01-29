@@ -1,35 +1,75 @@
 import Menu from "../../components/Menu";
 import { PageDiv, PageTitle } from "../../components/PageDiv/style";
 import Select from "../../components/Select";
+import { PrimaryButton } from "../../components/Buttons/styles";
 import { useContext, useState } from "react";
 import { UnidadeConsumidoraContext } from "../../contexts/UnidadeConsumidora/index.js";
-
+import InputDate from "../../components/InputDate";
+import FormInput from "../../components/Inputs";
 
 const CadastroEnergiaGerada = () => {
+  const energiaGerada = useContext(UnidadeConsumidoraContext);
 
-    const energiaGerada = useContext(UnidadeConsumidoraContext);
-    console.log(energiaGerada.unidades);
+  const [unidadeGeradora, setUndiadeGeradora] = useState("");
+  const [mes, setMes] = useState("");
+  const [ano, setAno] = useState("");
+  const [totalKw, setTotalKw] = useState(0);
 
-    return(
-        <>
-        <Menu
-        selected3={true}
-        />
+  const handleSubmitEnergiaGerada = async (evt) => {
+    evt.preventDefault();
 
-        <PageDiv>
+    try{
+        await fetch('http://localhost:3333/geracao',
+        {
+            method: 'POST',
+            body: JSON.stringify({
+                apelido: unidadeGeradora,
+                mes: mes,
+                ano: ano,
+                totalKw: totalKw,
+            }),
+            headers: {'Content-Type': 'application/json'},
+        },
+        )
+    } catch (error) {
+        
+
+    }
+
+  }
+
+
+  return (
+    <>
+      <Menu selected3={true} />
+
+      <PageDiv>
         <PageTitle>Lançamento de Geração Mensal</PageTitle>
 
-        <form>
-        <Select
-        placeholder={'Selecione uma opção:'}
-        opcoes={energiaGerada.unidades}
-        />
+        <form 
+        style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+        onSubmit={handleSubmitEnergiaGerada}
+        >
+          <Select
+            placeholder={"Selecione uma opção:"}
+            opcoes={energiaGerada.unidades}
+            setValue={setUndiadeGeradora}
+          />
 
+          <InputDate />
+
+          <FormInput
+            label={"Total Kw Gerado"}
+            value={totalKw}
+            setValue={setTotalKw}
+            type={"number"}
+          />
+
+          <PrimaryButton type={"submit"}>Salvar</PrimaryButton>
         </form>
-
-        </PageDiv>
-        </>
-    )
-}
+      </PageDiv>
+    </>
+  );
+};
 
 export default CadastroEnergiaGerada;
