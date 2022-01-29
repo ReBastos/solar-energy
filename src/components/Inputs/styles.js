@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { LoginInputs } from '../LoginInputs/styles';
 
-export const RegisterInput = styled(LoginInputs)`
+
+export const RegisterInput = styled.input`
 
 border-radius: 3px;
 border: solid 1px #5d6166;

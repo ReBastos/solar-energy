@@ -6,15 +6,22 @@ import { BiggerLogo } from "../../components/Logos/styles";
 import { LoginButton } from "../../components/Buttons/styles";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import LoginLabel from "../../components/LoginInputs";
+import { useState } from "react";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
+  const accessDashboard = useNavigate();
 
-  const onSubmit = () =>{
-
-    
-
-  }
+  const onSubmit = () => {
+    if (username != "" && password != "") {
+      accessDashboard("/dashboard");
+    } else {
+      console.log("Preencha os campos necessários");
+    }
+  };
   return (
     <>
       <div className="loginContainer">
@@ -28,13 +35,25 @@ const Login = () => {
           <h3>Seja Bem-Vindo!</h3>
 
           <form onSubmit={onSubmit}>
-          <LoginInputs />
+            <LoginLabel
+              value={username}
+              setValue={setUsername}
+              type={"text"}
+              icon={
+                "https://img.icons8.com/ios/50/000000/checked-user-male.png"
+              }
+              placeholder={"Usuário"}
+            />
 
-          <LoginInputs />
+            <LoginLabel
+              value={password}
+              setValue={setPassword}
+              type={"password"}
+              icon={"https://img.icons8.com/ios/50/000000/key-security.png"}
+              placeholder={"Senha"}
+            />
 
-            <Link to="/dashboard">
-          <LoginButton type="submit">Entrar</LoginButton>
-          </Link>
+            <LoginButton type="submit">Entrar</LoginButton>
           </form>
         </div>
       </div>

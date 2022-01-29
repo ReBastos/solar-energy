@@ -54,7 +54,7 @@ const Row = ({id, apelido, local, marca, modelo}) => {
 
         <td>{marca}</td>
 
-        <td>{modelo}</td>
+        <td>{modelo}W</td>
 
         <td><EditButton onClick={handleEdit}>Editar</EditButton></td>
 

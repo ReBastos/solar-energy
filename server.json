@@ -4,7 +4,7 @@
       "apelido": "teste5",
       "local": "teste5",
       "marca": "teste5",
-      "modelo": "teste5",
+      "modelo": 155,
       "ativo": true,
       "id": 6
     },
@@ -12,7 +12,7 @@
       "apelido": "Teste",
       "local": "Teste",
       "marca": "Teste",
-      "modelo": "Teste",
+      "modelo": 30,
       "ativo": true,
       "id": 7
     },
@@ -20,7 +20,7 @@
       "apelido": "Teste Editado",
       "local": "teste",
       "marca": "etset",
-      "modelo": "teste",
+      "modelo": 200,
       "ativo": true,
       "id": 8
     },
@@ -28,7 +28,7 @@
       "apelido": "Edit Teste",
       "local": "Teste Edit",
       "marca": "edit",
-      "modelo": "edit",
+      "modelo": 40,
       "ativo": false,
       "id": 9
     }

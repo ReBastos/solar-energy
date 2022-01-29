@@ -16,13 +16,13 @@ const FormCheckbox = ({value, setValue}) => {
 
     return(
         <>
-        <label>
+        <div style={{display: 'flex', alignItems: 'center'}}>
 
         
         <input type={'checkbox'} onChange={handleOnChange}/>
         <InputLabel>Ativo</InputLabel>
 
-        </label>
+        </div>
 
         </>
 

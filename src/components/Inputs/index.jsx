@@ -2,7 +2,7 @@ import { RegisterInput } from "./styles"
 import { InputLabel } from "../PageDiv/style"
 
 
-const FormInput = ({label, value, setValue}) => {
+const FormInput = ({label, value, setValue, type}) => {
 
 
     const handleOnChange = (evt) => {
@@ -13,7 +13,7 @@ const FormInput = ({label, value, setValue}) => {
     return(
         <>
         <InputLabel>{label}</InputLabel>
-        <RegisterInput  value={value} onChange={handleOnChange}/>
+        <RegisterInput required value={value} onChange={handleOnChange} type={type}/>
         </>
 
     )

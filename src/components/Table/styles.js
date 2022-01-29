@@ -8,14 +8,15 @@ margin-bottom: 30px;
 
     th{
 
-            text-align: left;
-            border: solid 1px;
-    
+        text-align: left;
+        border: solid 1px;
+        text-align: center;
 
     }
 
     td{
         border: solid 1px;
+        text-align: center;
     }
 
 `

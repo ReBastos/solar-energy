@@ -62,24 +62,28 @@ const CadastroUnidadeConsumidora = () => {
         label={'Apelido'}
         value={apelido}
         setValue={setApelido}
+        type={'text'}
         />
 
         <FormInput
         label={'Local'}
         value={local}
         setValue={setLocal}
+        type={'text'}
         />
 
         <FormInput
         label={'Marca'}
         value={marca}
         setValue={setMarca}
+        type={'text'}
         />
 
         <FormInput
         label={'Modelo'}
         value={modelo}
         setValue={setModelo}
+        type={'number'}
         />
 
         <FormCheckbox
