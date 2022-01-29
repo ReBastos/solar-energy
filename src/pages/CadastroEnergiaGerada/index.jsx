@@ -56,7 +56,10 @@ const CadastroEnergiaGerada = () => {
             setValue={setUndiadeGeradora}
           />
 
-          <InputDate />
+          <InputDate 
+          setAno={setAno}
+          setMes={setMes}
+          />
 
           <FormInput
             label={"Total Kw Gerado"}

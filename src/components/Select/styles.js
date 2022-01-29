@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const List = styled.select`
   background: #FFF;
   width: 250px;
-  height: 50px;
+  height: 30px;
   outline: 0;
   border: 1px solid ;
   padding-left: 5px;

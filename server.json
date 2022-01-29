@@ -41,5 +41,16 @@
       "id": 10
     }
   ],
-  "geracao": []
+  "geracao": [
+    {
+      "id": 0
+    },
+    {
+      "apelido": "Teste Editado",
+      "mes": "01",
+      "ano": "2022",
+      "totalKw": "8",
+      "id": 1
+    }
+  ]
 }

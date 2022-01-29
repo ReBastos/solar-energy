@@ -1,11 +1,16 @@
 import Menu from "../../components/Menu";
 import { PageDiv, PageTitle } from "../../components/PageDiv/style";
 import DashboardCard from "../../components/DashCard";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { UnidadeConsumidoraContext } from "../../contexts/UnidadeConsumidora/index.js";
-import { Doughnut } from 'react-chartjs-2';
+
+import { Bar } from "react-chartjs-2";
+
 
 const Dashboard = () => {
+
+
+
   const dashboardContext = useContext(UnidadeConsumidoraContext);
 
   const totalW = dashboardContext.unidades.map((value) => {
@@ -36,7 +41,7 @@ const Dashboard = () => {
 
       <PageDiv>
         <PageTitle>Dashboard</PageTitle>
-        <div style={{ display: "flex", gap: "7px" }}>
+        <div style={{ display: "flex", gap: "7px", flexWrap: 'wrap', justifyContent: "space-around" }}>
           <DashboardCard
             title={"Total Unidades"}
             data={dashboardContext.unidades.length}
@@ -58,8 +63,11 @@ const Dashboard = () => {
           />
         </div>
 
-        
+      
+    
       </PageDiv>
+
+    
     </>
   );
 };
