@@ -35,15 +35,15 @@ const EditUnidadeConsumidora = () => {
         evt.preventDefault();
 
         try{
-            await fetch('http://localhost:3333/unidades',
+            await fetch('http://localhost:3333/unidades/' + EditContext.editValue.id,
             {
-                method: 'POST',
+                method: 'PUT',
                 body: JSON.stringify({
-                    apelido: '',
-                    local: '',
-                    marca: '',
-                    modelo: '',
-                    ativo: ''
+                    apelido: editApelido,
+                    local: editLocal,
+                    marca: editMarca,
+                    modelo: editModelo,
+                    ativo: editAtivo
                 }),
                 headers: {'Content-Type': 'application/json'},
             },
