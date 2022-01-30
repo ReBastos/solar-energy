@@ -1,67 +1,60 @@
-import {EditButton} from '../EditButton/styles';
-import {RemoveButton} from '../RemoveButton/styles';
+import { EditButton } from "../EditButton/styles";
+import { RemoveButton } from "../RemoveButton/styles";
 import { useContext, useState } from "react";
-import {UnidadeConsumidoraContext} from '../../contexts/UnidadeConsumidora/index.js'
-import { useNavigate } from 'react-router-dom';
+import { UnidadeConsumidoraContext } from "../../contexts/UnidadeConsumidora/index.js";
+import { useNavigate } from "react-router-dom";
 
-const Row = ({id, apelido, local, marca, modelo}) => {
+const Row = ({ id, apelido, local, marca, modelo }) => {
+  const rowContext = useContext(UnidadeConsumidoraContext);
 
-    const rowContext = useContext(UnidadeConsumidoraContext);
+  const redirectEdit = useNavigate();
 
-    const redirectEdit = useNavigate();
+  const deleteJson = async (evt) => {
+    evt.preventDefault();
 
-    const deleteJson = async (evt) => {
+    try {
+      await fetch("http://localhost:3333/unidades/" + id, {
+        method: "DELETE",
+        body: JSON.stringify({
+          apelido: apelido,
+          local: local,
+          marca: marca,
+          modelo: modelo,
+          ativo: "",
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+    } catch (error) {}
 
-        evt.preventDefault();
+    rowContext.atualizar();
+  };
 
-        try{
-            await fetch('http://localhost:3333/unidades/'+id,
-            {
-                method: 'DELETE',
-                body: JSON.stringify({
-                    apelido: apelido,
-                    local: local,
-                    marca: marca,
-                    modelo: modelo,
-                    ativo: ''
-                }),
-                headers: {'Content-Type': 'application/json'},
-            },
-            )
-        } catch (error) {
-           
+  const handleEdit = () => {
+    rowContext.editUnidade(id);
+    redirectEdit("/editarunidadeconsumidora");
+  };
 
-        }
+  return (
+    <tr>
+      <td>{id}</td>
 
-        rowContext.atualizar();
-    }
+      <td>{apelido}</td>
 
-    const handleEdit = () =>{
+      <td>{local}</td>
 
-        rowContext.editUnidade(id);
-        redirectEdit('/editarunidadeconsumidora');
+      <td>{marca}</td>
 
-    }
-    
-    return (
-        
-        <tr>
-        <td>{id}</td>
+      <td>{modelo}W</td>
 
-        <td>{apelido}</td>
+      <td>
+        <EditButton onClick={handleEdit}>Editar</EditButton>
+      </td>
 
-        <td>{local}</td>
-
-        <td>{marca}</td>
-
-        <td>{modelo}W</td>
-
-        <td><EditButton onClick={handleEdit}>Editar</EditButton></td>
-
-        <td><RemoveButton onClick={deleteJson}>Remover</RemoveButton></td>
-        </tr>
-
-    )
-}
+      <td>
+        <RemoveButton onClick={deleteJson}>Remover</RemoveButton>
+      </td>
+    </tr>
+  );
+};
 
 export default Row;

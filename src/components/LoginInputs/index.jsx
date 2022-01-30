@@ -1,7 +1,6 @@
 import { LoginDiv, LoginInputs } from "./styles";
 
 const LoginLabel = ({ value, setValue, type, icon, placeholder }) => {
-  
   const handleLoginOnChange = (evt) => {
     setValue(evt.target.value);
   };
