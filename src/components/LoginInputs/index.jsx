@@ -10,7 +10,7 @@ const LoginLabel = ({ value, setValue, type, icon, placeholder }) => {
       <div>
         <LoginDiv>
           <img src={icon} />
-          <LoginInputs
+          <LoginInputs required
             type={type}
             placeholder={placeholder}
             value={value}

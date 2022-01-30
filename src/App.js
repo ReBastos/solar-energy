@@ -17,14 +17,15 @@ function App() {
     <>
 
     <UnidadeConsumidoraProvider>
-    <Menu/>
+    
+    
     <Routes>
       <Route path='/' element={<Login/>} />
-      <Route path='/dashboard' element={<Dashboard/>}/>
-      <Route path='/unidadeconsumidora' element={<UnidadeConsumidora/>}/>
-      <Route path='/cadastrounidadeconsumidora' element={<CadastroUnidadeConsumidora/>}/>
-      <Route path='/editarunidadeconsumidora' element={<EditUnidadeConsumidora/>}/>
-      <Route path='/cadastroenergia' element={<CadastroEnergiaGerada/>}/>
+      <Route path='/dashboard' element={<><Menu/><Dashboard/></>}/>
+      <Route path='/unidadeconsumidora' element={<><Menu/><UnidadeConsumidora/></>}/>
+      <Route path='/cadastrounidadeconsumidora' element={<><Menu/><CadastroUnidadeConsumidora/></>}/>
+      <Route path='/editarunidadeconsumidora' element={<><Menu/><EditUnidadeConsumidora/></>}/>
+      <Route path='/cadastroenergia' element={<><Menu/><CadastroEnergiaGerada/></>}/>
     </Routes>
     </UnidadeConsumidoraProvider>
     
