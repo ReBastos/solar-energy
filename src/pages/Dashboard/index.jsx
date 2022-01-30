@@ -4,16 +4,11 @@ import DashboardCard from "../../components/DashCard";
 import { useContext } from "react";
 import { UnidadeConsumidoraContext } from "../../contexts/UnidadeConsumidora/index.js";
 
-
-
 const Dashboard = () => {
-
-
-
   const dashboardContext = useContext(UnidadeConsumidoraContext);
 
   const totalW = dashboardContext.unidades.map((value) => {
-    return parseInt(value.modelo) 
+    return parseInt(value.modelo);
   });
 
   const averageSum = totalW.reduce((a, b) => a + b, 0);
@@ -38,7 +33,14 @@ const Dashboard = () => {
     <>
       <PageDiv>
         <PageTitle>Dashboard</PageTitle>
-        <div style={{ display: "flex", gap: "7px", flexWrap: 'wrap', justifyContent: "space-around" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "7px",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+          }}
+        >
           <DashboardCard
             title={"Total Unidades"}
             data={dashboardContext.unidades.length}
@@ -59,12 +61,7 @@ const Dashboard = () => {
             data={averageSum / totalW.length}
           />
         </div>
-
-      
-    
       </PageDiv>
-
-    
     </>
   );
 };

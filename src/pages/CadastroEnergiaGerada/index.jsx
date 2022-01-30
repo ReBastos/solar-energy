@@ -18,36 +18,28 @@ const CadastroEnergiaGerada = () => {
   const handleSubmitEnergiaGerada = async (evt) => {
     evt.preventDefault();
 
-    try{
-        await fetch('http://localhost:3333/geracao',
-        {
-            method: 'POST',
-            body: JSON.stringify({
-                apelido: unidadeGeradora,
-                mes: mes,
-                ano: ano,
-                totalKw: totalKw,
-            }),
-            headers: {'Content-Type': 'application/json'},
-        },
-        )
-    } catch (error) {
-        
-
-    }
-
-  }
-
+    try {
+      await fetch("http://localhost:3333/geracao", {
+        method: "POST",
+        body: JSON.stringify({
+          apelido: unidadeGeradora,
+          mes: mes,
+          ano: ano,
+          totalKw: totalKw,
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+    } catch (error) {}
+  };
 
   return (
     <>
-
       <PageDiv>
         <PageTitle>Lançamento de Geração Mensal</PageTitle>
 
-        <form 
-        style={{ display: "flex", flexDirection: "column", gap: "15px" }}
-        onSubmit={handleSubmitEnergiaGerada}
+        <form
+          style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+          onSubmit={handleSubmitEnergiaGerada}
         >
           <Select
             placeholder={"Selecione uma opção:"}
@@ -55,10 +47,7 @@ const CadastroEnergiaGerada = () => {
             setValue={setUndiadeGeradora}
           />
 
-          <InputDate 
-          setAno={setAno}
-          setMes={setMes}
-          />
+          <InputDate setAno={setAno} setMes={setMes} />
 
           <FormInput
             label={"Total Kw Gerado"}
