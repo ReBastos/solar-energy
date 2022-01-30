@@ -1,43 +1,11 @@
 {
   "unidades": [
     {
-      "apelido": "teste5",
-      "local": "teste5",
-      "marca": "teste5",
-      "modelo": 155,
+      "apelido": "Teste Apelido",
+      "local": "Teste Local",
+      "marca": "Teste Marca",
+      "modelo": "135",
       "ativo": true,
-      "id": 6
-    },
-    {
-      "apelido": "Teste",
-      "local": "Teste",
-      "marca": "Teste",
-      "modelo": 30,
-      "ativo": true,
-      "id": 7
-    },
-    {
-      "apelido": "Teste Editado",
-      "local": "teste",
-      "marca": "etset",
-      "modelo": 200,
-      "ativo": true,
-      "id": 8
-    },
-    {
-      "apelido": "TesteEdit",
-      "local": "Teste Edit",
-      "marca": "edit",
-      "modelo": 40,
-      "ativo": false,
-      "id": 9
-    },
-    {
-      "apelido": "sadadas",
-      "local": "asdas",
-      "marca": "adsasdasd",
-      "modelo": "134",
-      "ativo": false,
       "id": 10
     }
   ],

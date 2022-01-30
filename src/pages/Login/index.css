@@ -12,6 +12,8 @@
           align-items: center;
   margin: 0;
   padding: 0;
+  min-width: 350px;
+  min-height: 400px;
 }
 
 .imgDiv {
@@ -35,6 +37,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 15px;
+  min-width: 350px;
+  min-height: 400px;
 }
 
 .loginDiv form {

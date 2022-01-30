@@ -84,6 +84,7 @@ const EditUnidadeConsumidora = () => {
               label={"Modelo"}
               value={editModelo}
               setValue={setEditModelo}
+              type={"number"}
             />
 
             <FormCheckbox value={editAtivo} setValue={setEditAtivo} />

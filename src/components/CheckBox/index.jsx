@@ -14,19 +14,32 @@ const FormCheckbox = ({value, setValue}) => {
         
     }
 
-    return(
-        <>
+
+        if(value){
+
+            return(
+
+            <>
         <div style={{display: 'flex', alignItems: 'center'}}>
-
-        
-        <input type={'checkbox'} onChange={handleOnChange}/>
-        <InputLabel>Ativo</InputLabel>
-
+            <input type={'checkbox'} checked onChange={handleOnChange}/>
+            <InputLabel>Ativo</InputLabel>
         </div>
+            </>
+            )
+        } else {
 
-        </>
+            return(
+                <>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+            <input type={'checkbox'} onChange={handleOnChange}/>
+            <InputLabel>Ativo</InputLabel>
+        </div>
+            </>
+                )
 
-    )
+        }
+        
+
 }
 
 export default FormCheckbox;
