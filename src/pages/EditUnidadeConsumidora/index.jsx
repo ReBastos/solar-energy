@@ -69,6 +69,7 @@ const EditUnidadeConsumidora = () => {
         <PageTitle>Unidade Consumidora</PageTitle>
         <SubTitle>Cadastro de Unidade Consumidora</SubTitle>
 
+        <form onSubmit={handleEdit}>
         <FormInput
         label={'Apelido'}
         value={editApelido}
@@ -99,8 +100,9 @@ const EditUnidadeConsumidora = () => {
         
         />
 
-        <PrimaryButton onClick={handleEdit}>Salvar</PrimaryButton>
+        <PrimaryButton type={'submit'}>Salvar</PrimaryButton>
 
+        </form>
         </PageDiv>
         </>
 
