@@ -7,6 +7,7 @@ import CadastroEnergiaGerada from './pages/CadastroEnergiaGerada';
 import UnidadeConsumidora from './pages/UnidadeConsumidora';
 import CadastroUnidadeConsumidora from './pages/CadastroUnidadeConsumidora';
 import EditUnidadeConsumidora from './pages/EditUnidadeConsumidora';
+import Menu from './components/Menu'
 
 import {UnidadeConsumidoraProvider} from './contexts/UnidadeConsumidora'
 
@@ -16,6 +17,7 @@ function App() {
     <>
 
     <UnidadeConsumidoraProvider>
+    <Menu/>
     <Routes>
       <Route path='/' element={<Login/>} />
       <Route path='/dashboard' element={<Dashboard/>}/>

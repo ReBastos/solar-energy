@@ -50,10 +50,6 @@ const CadastroUnidadeConsumidora = () => {
     
     return(
         <>
-        <Menu 
-        selected2={true}
-        />
-
         <PageDiv>
         <PageTitle>Unidade Consumidora</PageTitle>
         <SubTitle>Cadastro de Unidade Consumidora</SubTitle>

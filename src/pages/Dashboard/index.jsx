@@ -4,7 +4,6 @@ import DashboardCard from "../../components/DashCard";
 import { useContext } from "react";
 import { UnidadeConsumidoraContext } from "../../contexts/UnidadeConsumidora/index.js";
 
-import { Bar } from "react-chartjs-2";
 
 
 const Dashboard = () => {
@@ -37,8 +36,6 @@ const Dashboard = () => {
 
   return (
     <>
-      <Menu selected1={true} />
-
       <PageDiv>
         <PageTitle>Dashboard</PageTitle>
         <div style={{ display: "flex", gap: "7px", flexWrap: 'wrap', justifyContent: "space-around" }}>

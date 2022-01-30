@@ -41,7 +41,6 @@ const CadastroEnergiaGerada = () => {
 
   return (
     <>
-      <Menu selected3={true} />
 
       <PageDiv>
         <PageTitle>Lançamento de Geração Mensal</PageTitle>

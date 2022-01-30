@@ -64,9 +64,6 @@ const EditUnidadeConsumidora = () => {
     
     return(
         <>
-        <Menu 
-        selected2={true}
-        />
 
         <PageDiv>
         <PageTitle>Unidade Consumidora</PageTitle>
