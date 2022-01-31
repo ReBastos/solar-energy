@@ -7,7 +7,7 @@ const FormInput = ({ label, value, setValue, type }) => {
   };
 
   return (
-    <>
+    <div>
       <InputLabel>{label}</InputLabel>
       <RegisterInput
         required
@@ -15,7 +15,7 @@ const FormInput = ({ label, value, setValue, type }) => {
         onChange={handleOnChange}
         type={type}
       />
-    </>
+    </div>
   );
 };
 
