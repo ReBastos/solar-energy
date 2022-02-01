@@ -17,6 +17,7 @@ const InputDate = ({ setMes, setAno }) => {
       <InputLabel>Mês/Ano</InputLabel>
       <DateDiv>
         <Date
+          required
           type={"date"}
           onChange={handleOnChangeDate}
           min="2022-01-01"

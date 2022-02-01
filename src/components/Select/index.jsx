@@ -19,7 +19,7 @@ const Select = ({ placeholder, opcoes, value, setValue }) => {
     <div>
       <InputLabel>Unidade Geradora</InputLabel>
 
-      <List selected="" onChange={handleSelectOnhcange}>
+      <List required selected="" onChange={handleSelectOnhcange}>
         <option selected disabled value="">
           {placeholder}
         </option>

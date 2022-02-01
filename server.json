@@ -11,14 +11,74 @@
   ],
   "geracao": [
     {
-      "id": 0
-    },
-    {
       "apelido": "Teste Editado",
       "mes": "01",
       "ano": "2022",
       "totalKw": "8",
       "id": 1
+    },
+    {
+      "apelido": "Teste Apelido",
+      "mes": "01",
+      "ano": "2022",
+      "totalKw": "155",
+      "id": 2
+    },
+    {
+      "apelido": "",
+      "mes": "01",
+      "ano": "2022",
+      "totalKw": "10",
+      "id": 3
+    },
+    {
+      "apelido": "",
+      "mes": "01",
+      "ano": "2022",
+      "totalKw": "110",
+      "id": 4
+    },
+    {
+      "apelido": "Teste Apelido",
+      "mes": "01",
+      "ano": "2022",
+      "totalKw": "110",
+      "id": 5
+    },
+    {
+      "apelido": "Teste Apelido",
+      "mes": "01",
+      "ano": "2022",
+      "totalKw": "110",
+      "id": 6
+    },
+    {
+      "apelido": "",
+      "mes": "",
+      "ano": "",
+      "totalKw": 0,
+      "id": 7
+    },
+    {
+      "apelido": "",
+      "mes": "02",
+      "ano": "2022",
+      "totalKw": "150",
+      "id": 8
+    },
+    {
+      "apelido": "Teste Apelido",
+      "mes": "04",
+      "ano": "2022",
+      "totalKw": "256",
+      "id": 9
+    },
+    {
+      "apelido": "Teste Apelido",
+      "mes": "12",
+      "ano": "2022",
+      "totalKw": "157",
+      "id": 10
     }
   ]
 }

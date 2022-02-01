@@ -13,7 +13,7 @@ const CadastroEnergiaGerada = () => {
   const [unidadeGeradora, setUndiadeGeradora] = useState("");
   const [mes, setMes] = useState("");
   const [ano, setAno] = useState("");
-  const [totalKw, setTotalKw] = useState(0);
+  const [totalKw, setTotalKw] = useState('');
 
   const handleSubmitEnergiaGerada = async (evt) => {
     evt.preventDefault();
@@ -29,6 +29,8 @@ const CadastroEnergiaGerada = () => {
         }),
         headers: { "Content-Type": "application/json" },
       });
+
+      energiaGerada.atualizar();
     } catch (error) {}
   };
 
