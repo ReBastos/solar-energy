@@ -9,7 +9,6 @@ import { UnidadeConsumidoraContext } from "../../contexts/UnidadeConsumidora/ind
 
 const EditUnidadeConsumidora = () => {
   const EditContext = useContext(UnidadeConsumidoraContext);
-  console.log(EditContext);
 
   const [editApelido, setEditApelido] = useState("");
   const [editLocal, setEditLocal] = useState("");

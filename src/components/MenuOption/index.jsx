@@ -20,7 +20,7 @@ const MenuOption = ({icon, title, selected, setFalse1, setFalse2, setTrue, navig
             <button onClick={changeButtons}>
             <MenuButton selected>
             <img src={icon}/>
-            {title}
+            <label>{title}</label>
             </MenuButton>
             </button>
             </>
@@ -31,7 +31,7 @@ const MenuOption = ({icon, title, selected, setFalse1, setFalse2, setTrue, navig
         <button onClick={changeButtons}>
         <MenuButton>
         <img src={icon}/>
-        {title}
+        <label>{title}</label>
         </MenuButton>
         </button>
         </>

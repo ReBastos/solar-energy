@@ -19,16 +19,16 @@ const Login = () => {
     if (username != "" && password != "") {
       accessDashboard("/dashboard");
     } else {
-      console.log("Preencha os campos necessários");
+      
     }
   };
   return (
     <>
-      <div className="loginContainer">
+      <div className="loginContainer1">
         <img src={loginImage} alt="" className="imgDiv" />
       </div>
 
-      <div className="loginContainer">
+      <div className="loginContainer2">
         <div className="loginDiv">
           <BiggerLogo src={logo} />
 

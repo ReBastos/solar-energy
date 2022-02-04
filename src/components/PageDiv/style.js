@@ -6,7 +6,6 @@ export const PageDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: left;
-
 `
 
 export const PageTitle = styled.h1`

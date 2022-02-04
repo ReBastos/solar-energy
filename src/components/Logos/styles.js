@@ -14,4 +14,10 @@ export const SmallLogo = styled.img`
          height: 89px;
          margin-bottom: 20px;
 
+        @media(max-width: 800px){
+        width: 70px;
+        height: 50px;
+        justify-content: center;
+}
+
 `

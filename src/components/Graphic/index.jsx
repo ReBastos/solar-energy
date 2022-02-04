@@ -40,7 +40,7 @@ const Chart = ({labels, dataServer}) => {
     },
     plugins: {
         legend: {
-            display: false,
+            display: true,
         },
         title: {
             display: false,
@@ -53,7 +53,7 @@ const Chart = ({labels, dataServer}) => {
         labels,
         datasets: [
             {
-                label: 'Geração',
+                label: 'Total Kw',
                 data: dataServer,
                 borderColor: '#fbae3e',
                 backgroundColor: '#fbae3e'

@@ -22,6 +22,7 @@ export const LoginDiv = styled.div`
   justify-content: center;
   width: 300px;
   height: 45px;
+  background-color: white;
 
   &:focus {
     zoom: 105%;

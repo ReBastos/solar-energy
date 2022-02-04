@@ -27,4 +27,22 @@ export const MenuButton = styled.div`
         width: 26px;
         height: 26px;
     }
+
+
+    @media(max-width: 800px){
+        width: 80px;
+        padding-left: 5px;
+        padding-right: 5px;
+        justify-content: center;
+
+        
+        label {
+            display: none;
+        }
+
+        
+
+
+    }
+
 `

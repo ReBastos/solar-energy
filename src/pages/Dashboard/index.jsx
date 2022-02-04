@@ -1,3 +1,4 @@
+import './index.css'
 import { PageDiv, PageTitle } from "../../components/PageDiv/style";
 import DashboardCard from "../../components/DashCard";
 import { useContext, useEffect, useState } from "react";
@@ -11,7 +12,6 @@ const Dashboard = () => {
   //Get Context
   const dashboardContext = useContext(UnidadeConsumidoraContext);
   
-  console.log(dashboardContext.geracao);
 
   //Gerar Média Kw
   const totalW = dashboardContext.unidades.map((value) => {
@@ -39,7 +39,6 @@ const Dashboard = () => {
 
   //Informações Gráfico 
   const [energiaMeses, setEnergiaMeses] = useState();
-  console.log(energiaMeses)
 
   useEffect(() => {
 
@@ -98,6 +97,7 @@ const Dashboard = () => {
 
           
           <Chart
+          style={{height: '400px'}}
           labels={['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov', 'Dez']}
           dataServer={energiaMeses}
           />

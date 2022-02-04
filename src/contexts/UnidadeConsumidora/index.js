@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import handleGraphicData from "../../utils";
 
 export const UnidadeConsumidoraContext = createContext([]);
 
