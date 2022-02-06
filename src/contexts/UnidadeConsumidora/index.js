@@ -9,22 +9,15 @@ export function UnidadeConsumidoraProvider({ children }) {
 
   const [editValue, setEditValue] = useState();
 
-  
-
   useEffect(async () => {
     const response = await fetch("http://localhost:3333/unidades");
     const unidadesResponse = await response.json();
     setUnidadesConsumidoras(unidadesResponse);
 
-    const responseGeradora = await fetch("http://localhost:3333/geracao")
+    const responseGeradora = await fetch("http://localhost:3333/geracao");
     const geracaoResponse = await responseGeradora.json();
-    setUnidadesGeradoras(geracaoResponse);   
-    
-    
+    setUnidadesGeradoras(geracaoResponse);
   }, [atualizar]);
-
- 
-
 
   const atualizarFetch = async () => {
     const atualizacao = await fetch("http://localhost:3333/unidades");

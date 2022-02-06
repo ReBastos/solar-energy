@@ -2,7 +2,6 @@ import { InputLabel } from "../PageDiv/style";
 import { List } from "./styles";
 
 const Select = ({ placeholder, opcoes, value, setValue }) => {
-  
   const handleSelectOnhcange = (evt) => {
     setValue(evt.target.value);
   };

@@ -1,4 +1,3 @@
-import Menu from "../../components/Menu";
 import { PageDiv, PageTitle } from "../../components/PageDiv/style";
 import Select from "../../components/Select";
 import { PrimaryButton } from "../../components/Buttons/styles";
@@ -13,7 +12,7 @@ const CadastroEnergiaGerada = () => {
   const [unidadeGeradora, setUndiadeGeradora] = useState("");
   const [mes, setMes] = useState("");
   const [ano, setAno] = useState("");
-  const [totalKw, setTotalKw] = useState('');
+  const [totalKw, setTotalKw] = useState("");
 
   const handleSubmitEnergiaGerada = async (evt) => {
     evt.preventDefault();
@@ -31,6 +30,8 @@ const CadastroEnergiaGerada = () => {
       });
 
       energiaGerada.atualizar();
+      setTotalKw(0);
+      alert("Submetido.");
     } catch (error) {}
   };
 
